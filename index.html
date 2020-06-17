@@ -57,38 +57,8 @@ $('#cwb').fullCalendar({//カレンダー記述ここから
  }//eventクリックここまで
  ,
  //カレンダーにイベントを記述する方法ここから
- eventSources:[{
-        events:[// 配列とオブジェクトを使用
-      {
-          
-          title:'チューター研修',
-          descripcion:'php選手権について打ち合わせ',
-          start:'2020-06-16',
-          //ここに記述すると個別に色を設定可能
-          color:'yellow',
-          textColor:'gray'
+        events:'http://localhost/PHP_gs_code/The-tutors/test3/event.php',
 
-      },
-      {
-          title:'サイト制作',
-          descripcion:'選手権制作スタート〜エンド',
-          start:'2020-06-17',
-          end:'2020-06-23'
-      },{
-          title:'プレリリース 発表会',
-          descripcion:'発表会',
-          start:'2020-06-24T12:30:00',
-          allDay:false,//ここのfalseだと終日の部分に表示されなくなる
-          color:'black',
-          textColor:'pink'
-      },
-
-      ],
-      //ここの記述がデフォルトのイベントの色になる
-      color:'blue',
-      textColor:'white'
-
- }],
  //イベントバーにクリックした時の記述
  eventClick:function(calEvent, jsEvent, view){//calEventはeventsの配列ないhのオブジェクトを指している
    $('#titleEvent').html(calEvent.title);//オブジェクト内のtitleのHTMLに変更する
